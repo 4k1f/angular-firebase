@@ -1,0 +1,14 @@
+.info-pack{
+  color:rgb(75, 113, 218);
+  padding: 10px;
+  background:#FFF;
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+.info-pack div{
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+

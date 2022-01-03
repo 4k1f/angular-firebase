@@ -1,0 +1,23 @@
+.card-item {
+  margin-bottom: 30px;
+  border: 4px solid #000;
+  border-radius: 10px;
+  background-color: rgb(170, 185, 204);
+
+}
+
+.mat-card-header {
+  cursor: pointer;
+
+}
+
+mat-card-content{
+  font-size:15px;//
+  font-weight: bold;
+}
+li{
+  background-color: rgb(170, 185, 204);
+}
+small{
+  color:#000;
+}

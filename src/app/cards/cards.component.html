@@ -1,0 +1,76 @@
+<mat-tab-group animationDuration="1000ms" >
+  <main>
+   <div class="container">
+   <!--
+  ***bu(alt) kısım Admin profilini görüntüleyecek.
+-->
+  <mat-tab  class="nav-info" label="Profil" >
+    <app-profil></app-profil>
+
+  </mat-tab>
+<!--
+  ***bu(alt) kısım Üyeleri görüntüleyecek.
+-->
+   <mat-tab  class="nav-uye" label="Üyeler">
+    <app-uyeler></app-uyeler>
+
+   </mat-tab>
+
+   <mat-tab  class="nav-admin "  label="Admin Ayarları">
+   <app-ayarlar></app-ayarlar>
+   </mat-tab>
+<!--
+  ***bu(alt) kısım içerikleri görüntüleyecek.
+-->
+   <mat-tab  class="nav-icerik "  label="İçerikler">
+   <app-icerik></app-icerik>
+
+   </mat-tab>
+
+<!--
+  ***bu(alt) kısım İstatistikleri görüntüleyecek.
+-->
+   <mat-tab  class="nav-istatik "  label="İstatistikler">
+   <app-istatistik></app-istatistik>
+   </mat-tab>
+
+<!--
+  ***bu(alt) kısımda ajanslar veya emlakçılar için kart basılabilecek
+-->
+   <mat-tab  class="nav-out "  label="Kart Oluştur">
+   <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h1 class="page-title">Kartlar</h1>
+
+    </div>
+    <app-card-search></app-card-search>
+    <button mat-flat-button color="primary" style="margin-left: 16px" (click)="openAddCardModal()">Yeni Kart</button>
+  </div>
+  <hr>
+  <div class="cards">
+    <div class="row">
+      <div class="col-12" *ngIf="!cardService.cards">
+        <span>Kartlar yükleniyor. Lütfen bekleyiniz.</span>
+      </div>
+      <div class="col-12" *ngIf="cardService.cards?.length === 0">
+        <span>Henüz kart eklemediniz. <a class="text-primary" (click)="openAddCardModal()">Buraya tıklayarak</a> ilk kartınızı ekleyebilirsiniz.</span>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3" *ngFor="let card of cardService.filteredCards">
+        <app-card-item [card]="card"></app-card-item>
+      </div>
+    </div>
+  </div>
+   </mat-tab>
+<!--
+  ***bu(alt) kısım oturumu kapatma sayfasını görüntüleyecek.
+-->
+    <mat-tab  class="nav-out "  label="Oturumu Kapat">
+    <app-out-page></app-out-page>
+
+    </mat-tab>
+
+
+   </div>
+
+   </main>
+

@@ -1,0 +1,67 @@
+
+<mat-tab-group animationDuration="1000ms" >
+  <main>
+   <div class="container">
+   <!--
+  ***bu(alt) kısım Admin profilini görüntüleyecek.
+-->
+  <mat-tab  class="nav-info" label="Home" >
+
+   <app-home></app-home>
+  </mat-tab>
+<!--
+  ***bu(alt) kısım Üyeleri görüntüleyecek.
+-->
+   <mat-tab  class="nav-user" label="Profil">
+
+    <app-profil></app-profil>
+   </mat-tab>
+   <!--
+
+-->
+   <mat-tab  class="nav-agenty "  label="Ajans">
+   <app-agenty></app-agenty>
+   </mat-tab>
+  <!--
+
+-->
+   <mat-tab  class="nav-property "  label="Emlak">
+   <app-property></app-property>
+   </mat-tab>
+<!--
+
+-->
+   <mat-tab  class="nav-about "  label="Hakkında">
+   <app-about></app-about>
+
+   </mat-tab>
+
+<!--
+  k.
+-->
+   <mat-tab  class="nav-contact "  label="İletişim">
+   <app-contact></app-contact>
+   </mat-tab>
+
+
+
+   <mat-tab  class="nav-sign-out "  label="Oturumu kapat">
+    <div class="container">
+      <div class="col-lg-4 d-flex flex-column align-items-center text-center">
+        <div class="col-lg-12 pb-2 ">
+           <h1 class="pt-2">Ayrılıyor musunuz?</h1>
+           <!--
+            oturumu kapatma
+            -->
+           <h3>Oturumu Kapatmak istediğinizden emin misiniz?</h3>
+           <a href=" " class="nav-link"><i class="fas fa-sign-out-alt fa-2x me-3"></i><span>Oturumu Kapat</span></a>
+        </div>
+      </div>
+
+     </div>
+   </mat-tab>
+
+
+   </div>
+
+   </main>

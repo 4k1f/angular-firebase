@@ -1,0 +1,58 @@
+
+
+  <mat-toolbar color="primary">
+    <span>{{Baslik}}</span>
+  </mat-toolbar>
+
+
+<form [formGroup]="form">
+
+  <mat-form-field>
+    <mat-label>Adı</mat-label>
+    <input matInput pleaceholder="Adı" formControlName="UyeAdi">
+  </mat-form-field >
+
+  <mat-form-field>
+    <mat-label>Tarihi</mat-label>
+    <input matInput pleaceholder="Tarihi"  formControlName="KayitTarihi">
+   </mat-form-field>
+
+    <mat-form-field >
+      <mat-label>Rolü</mat-label>
+      <mat-select disableRipple formControlName="UyeRolu">
+        <mat-option value="Uye"> Üye</mat-option>
+        <mat-option value="Admin"> Admin </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+  <mat-form-field >
+    <mat-label>Türü</mat-label>
+      <mat-select disableRipple formControlName="UyeTuru">
+        <mat-option value="Emlak"> Emlak</mat-option>
+        <mat-option value="Ajans"> Ajans </mat-option>
+        <mat-option value="Bireysel Satisci"> Bireysel Satışçı </mat-option>
+        <mat-option value="Bireysel Alici"> Bireysel Alıcı </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label>Deneyimi</mat-label>
+      <mat-select disableRipple formControlName="UyeDeneyimi">
+        <mat-option value="Caylak"> Çaylak</mat-option>
+        <mat-option value="Tecrubeli"> Tecrübeli </mat-option>
+        <mat-option value="Profosyonel"> Profosyonel </mat-option>
+        <mat-option value="Master"> Master </mat-option>
+        <mat-option value="Elit"> Elit </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label>Yetkilendirme</mat-label>
+    <mat-select disableRipple class="yetkilendirme" formControlName="UyeYetki">
+      <mat-option  value="Var">Var</mat-option>
+      <mat-option value="Yok"> Yok </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="this.dialogRef.close(form.value)">Kaydet</button>
+  <button mat-raised-button color="warn"  (click)="this.dialogRef.close()">İptal</button>
+</form>

@@ -1,0 +1,83 @@
+   <section>
+         <div class="resim_yazi">  Profil <i class="fas fa-user fa-2x me-3" ></i></div>
+       </section>
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+        <h2 class="h3 mb-4 page-title">Düzenle</h2>
+        <div class="my-4">
+            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Profile</a>
+                </li>
+            </ul>
+            <form>
+
+                <hr class="my-4" />
+                <br>
+                <mat-form-field>
+                  <mat-label>Adı...</mat-label>
+                  <input matInput pleaceholder="Adı" formControlName="ad">
+                </mat-form-field >
+
+                <br>
+                <br>
+                <mat-form-field>
+                  <mat-label>Adres...</mat-label>
+                  <input matInput pleaceholder="Adres" formControlName="adres">
+                </mat-form-field >
+
+                <br>
+                <br>
+                <mat-form-field>
+                  <mat-label>E-mail...</mat-label>
+                  <input matInput pleaceholder="E-mail" formControlName="email">
+                </mat-form-field >
+
+                <br>
+
+
+                <hr class="my-4" />
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                      <br>
+                      <mat-form-field>
+                        <mat-label>Parola...</mat-label>
+                        <input matInput pleaceholder="Parola" formControlName="password">
+                      </mat-form-field >
+
+                      <br>
+                      <br>
+                      <mat-form-field>
+                        <mat-label> Yeni Parola...</mat-label>
+                        <input matInput pleaceholder="Parola" formControlName="password" >
+                      </mat-form-field >
+
+                      <br>
+                      <br>
+                      <mat-form-field>
+                        <mat-label>Yeni Parola(tekrar)...</mat-label>
+                        <input matInput pleaceholder="Parola" formControlName="password">
+                      </mat-form-field >
+
+                      <br>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-2">Parola Gerekleri:</p>
+                        <p class="small text-muted mb-2">Yeni bir parola oluşturmak için aşağıdaki gereksinimlerin tümünü karşılamanız gerekir:</p>
+                        <ul class="small text-muted pl-4 mb-0">
+                            <li>Min. 8 karakter</li>
+                            <li>En az bir özel karakter</li>
+                            <li>En az bir Sayı</li>
+                            <li>Önceki Parolardan Farklı Olmalı</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" id="profil_update" class="btn btn-primary">Değişiklikleri Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<br><br><br><br><br><br>
